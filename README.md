@@ -41,21 +41,36 @@ File ini berisi dataset dari buku dengan jumlah total sample sebanyak 271.360 sa
     |      Publisher      | 271360 non-null | object |
     |     Image-URL-S     | 271360 non-null | object |
     |     Image-URL-M     | 271360 non-null | object |
-    |     Image-URL-L     | 271360 non-null | object |
+    |     Image-URL-L     | 271357 non-null | object |
 
 - Rating.csv<br>
-File ini berisi dataset penilaian dari user dengan jumlah total sample sebanyak 1.149.780 sampel, berikut variabel yang ada pada file ini:
-  - User-ID : merupakan id dari user
-  - ISBN : merupakan id dari buku yang dinilai oleh user
-  - Book-Rating : merupakan nilai dari user untuk buku <br>
+File ini berisi dataset penilaian dari pengguna dengan jumlah total sample sebanyak 1.149.780 sampel, berikut variabel yang ada pada file ini:
+  - User-ID : merupakan id dari pengguna
+  - ISBN : merupakan id dari buku yang dinilai oleh pengguna
+  - Book-Rating : merupakan nilai dari pengguna untuk buku <br>
   
-  Berikut penjelasan lebih rinci mengenai variabel yang ada pada file Book.csv 
+  Berikut penjelasan lebih rinci mengenai variabel yang ada pada file Rating.csv 
 
     |        Column       |  Non-Null Count  |  Dtype |
     |:-------------------:|:----------------:|:------:|
     |       User-ID       | 1149780 non-null |  int64 |
     |         ISBN        | 1149780 non-null | object |
     |     Book-Rating     | 1149780 non-null |  int64 |
+
+- User.csv<br>
+File ini berisi dataset pengguna dengan jumlah total sample sebanyak 278.858 sampel, berikut variabel yang ada pada file ini:
+  - User-ID : merupakan id dari user
+  - Location : merupakan tempat dari pengguna
+  - Age : merupakan umur dari pengguna <br>
+  
+  Berikut penjelasan lebih rinci mengenai variabel yang ada pada file User.csv 
+
+    |        Column       |  Non-Null Count  |  Dtype |
+    |:-------------------:|:----------------:|:------:|
+    |       User-ID       | 278858 non-null |  int64 |
+    |       Location      | 278858 non-null | object |
+    |         Age         | 168096 non-null |  float64 |
+
 
 
 
