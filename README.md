@@ -15,9 +15,9 @@ Untuk membuat sistem rekomendasi yang dapat meningkatkan minat baca, terdapat be
 - Bagaimana cara membuat sistem rekomendasi yang dapat merekomendasikan buku lain yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca ?
 
 Untuk menyelesaikan permasalahan tersebut, akan dibuat sebuah sistem rekomendasi yang terfokus pada tujuan berikut:
-- Mampu menghasilkan rekomendasi buku yang sesuai dengan minat pembaca. 
+- Mampu menghasilkan rekomendasi buku yang sesuai dengan minat pembaca. <br?
 Salah satu teknik yang dapat digunakan adalah teknik <i>content based filtering</i>. Teknik <i>content based filtering</i> bekerja dengan mempelajari riwayat buku yang telah dibaca contohnya siapa penulis dari buku yang sering dibaca, apa pencetak buku dari buku yang dibaca user, dan lain sebagainya.. Dengan menggunakan teknik ini, rekomendasi yang diberikan oleh sistem akan lebih tepat.
-- Mampu merekomendasikan buku yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca. 
+- Mampu merekomendasikan buku yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca. <br>
 Teknik yang dapat digunakan adalah teknik <i>collaborative filtering</i>. Teknik ini bekerja dengan mempelajari pembaca, contohnya nilai yang diberikan oleh pembaca pada suatu buku, dan lain sebagainya.
 
 ## Data Understanding 
