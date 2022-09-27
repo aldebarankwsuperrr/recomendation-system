@@ -21,7 +21,7 @@ Untuk menyelesaikan permasalahan tersebut, akan dibuat sebuah sistem rekomendasi
 ## Data Understanding 
 <a href="https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset">Dataset</a> yang digunakan merupakan sebuah dataset buku yang terpisah menjadi 3 file, yaitu "Book.csv", "Rating.csv", dan "User.csv". Berikut penjelasan lebih rinci pada ketiga file tersebut.
 - Book.csv<br>
-File ini berisi dataset dari buku dengan jumlah total sample sebanyak 271360 sampel, berikut variabel yang ada pada file ini:
+File ini berisi dataset dari buku dengan jumlah total sample sebanyak 271.360 sampel, berikut variabel yang ada pada file ini:
   - ISBN : merupakan id dari tiap buku
   - Book-Title : merupakan judul dari buku
   - Book-Author : merupakan penulis dari buku. (penulis pertama yang dicantumkan)
@@ -42,6 +42,23 @@ File ini berisi dataset dari buku dengan jumlah total sample sebanyak 271360 sam
     |     Image-URL-S     | 271360 non-null | object |
     |     Image-URL-M     | 271360 non-null | object |
     |     Image-URL-L     | 271360 non-null | object |
+
+- Rating.csv<br>
+File ini berisi dataset penilaian dari user dengan jumlah total sample sebanyak 1.149.780 sampel, berikut variabel yang ada pada file ini:
+  - User-ID : merupakan id dari user
+  - ISBN : merupakan id dari buku yang dinilai oleh user
+  - Book-Rating : merupakan nilai dari user untuk buku <br>
+  
+  Berikut penjelasan lebih rinci mengenai variabel yang ada pada file Book.csv 
+
+    |        Column       |  Non-Null Count  |  Dtype |
+    |:-------------------:|:----------------:|:------:|
+    |       User-ID       | 1149780 non-null |  int64 |
+    |         ISBN        | 1149780 non-null | object |
+    |     Book-Rating     | 1149780 non-null |  int64 |
+
+
+
 
 
 
