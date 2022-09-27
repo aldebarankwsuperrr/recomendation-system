@@ -17,3 +17,8 @@ Untuk membuat sistem rekomendasi yang dapat meningkatkan minat baca, terdapat be
 Untuk menyelesaikan permasalahan tersebut, akan dibuat sebuah sistem rekomendasi yang terfokus pada tujuan berikut:
 - Mampu menghasilkan rekomendasi buku yang sesuai dengan minat pembaca menggunakan teknik <i>content based filtering</i>.
 - Mampu merekomendasikan buku yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca menggunakan teknik <i>collaborative filtering</i>.
+
+## Data Understanding 
+<a href="https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset">Dataset</a> yang digunakan merupakan sebuah dataset buku yang terpisah menjadi 3 file, yaitu "Book.csv", "Rating.csv", dan "User.csv". Berikut penjelasan lebih rinci pada ketiga file tersebut.
+- Book.csv<br>
+File ini 
