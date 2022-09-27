@@ -73,14 +73,14 @@ File ini berisi dataset penilaian dari pengguna dengan jumlah total sample seban
 
 
 <br>
-Seperti yang telah dijelaskan pada bagian Rating.csv bahwa nilai yang diberikan oleh pengguna terbagi menjadi 2 jenis yaitu, eksplisit dan implisit. Untuk nilai dengan jenis ekplisit memiliki rentang nilai dari 1 - 10, sedangkan pada nilai implisit hanya terdapat satu nilai yaitu 0. Untuk membuat sistem rekomendasi dengan teknik <i>collaborative filtering</i> maka akan digunakan data dengan nilai eksplisit. Berikut tabel dari jumlah data nilai implisi dan eksplisit.
-
+Seperti yang telah dijelaskan pada bagian Rating.csv bahwa nilai yang diberikan oleh pengguna terbagi menjadi 2 jenis yaitu, eksplisit dan implisit. Untuk nilai dengan jenis ekplisit memiliki rentang nilai dari 1 - 10, sedangkan pada nilai implisit hanya terdapat satu nilai yaitu 0. Untuk membuat sistem rekomendasi dengan teknik <i>collaborative filtering</i> maka akan digunakan data dengan nilai eksplisit. Berikut tabel dari jumlah data nilai implisi dan eksplisit.<br><br>
 
 |        Jenis       |   Jumlah Data    |
 |:------------------:|:----------------:|
 |       eksplisit    | 433.671 |
 |       implisit     | 716.109 |
 
+<br>
 Meskipun jumlah data pada nilai dengan jenis ekplisit kurang dari 50 %, nilai dengan jenis tersebut akan dipakai dalam penerapan teknik <i>collaborative filtering</i>. Sedangkan nilai dengan jenis implisit tidak akan dipakai, karena nilai dengan jenis implisit hanya memiliki satu jenis <i>value</i> yaitu 0, sehingga akan sulit menerapakan teknik <i>collaborative filtering</i> menggunakan nilai implisit.
 
 
