@@ -30,7 +30,8 @@ File ini berisi dataset dari buku dengan jumlah total sample sebanyak 271.360 sa
   - Image-URL-M : merupakan link dari gambar cover
   - Image-URL-L : merupakan link dari gambar cover <br>
   
-  Berikut penjelasan lebih rinci mengenai variabel yang ada pada file Book.csv 
+  Berikut penjelasan lebih rinci mengenai variabel yang ada pada file Book.csv <br>
+ 
 
     |        Column       |  Non-Null Count |  Dtype |
     |:-------------------:|:---------------:|:------:|
@@ -43,6 +44,7 @@ File ini berisi dataset dari buku dengan jumlah total sample sebanyak 271.360 sa
     |     Image-URL-M     | 271360 non-null | object |
     |     Image-URL-L     | 271357 non-null | object |
     
+        
 - User.csv<br>
 File ini berisi dataset pengguna dengan jumlah total sample sebanyak 278.858 sampel, berikut variabel yang ada pada file ini:
   - User-ID : merupakan id dari user
@@ -111,7 +113,7 @@ Kekurangan :
 - Rekomendasi bersifat monoton.
 - Kurang mampu merekomendasikan <i>item</i> yang tidak terduga.
 
-Pada proyek ini, penerapan <i>content based filtering</i> akan menggunakan fungsi tfidfvectorizer dari <i>library</i> sklearn. Dengan menggunakan fungsi tersebut
+Pada proyek ini, penerapan <i>content based filtering</i> akan menggunakan fungsi tfidfvectorizer dari <i>library</i> sklearn. Dengan melakukan <i>fit</i> dan <i>transform</i> dari fungsi tersebut, maka akan diidentifikasi fitur-fitur penting dari setiap buku. Setelah ditemukan fitur-fitur penting, maka akan dibentuk vektor tfidf dalam bentuk matriks menggunakan fungsi todense(). Vektor tfidf berfungsi untuk mengidentifikasi korelasi antara judul buku dengan fitur-fitur penting yang telah di peroleh. Selanjutnya adalah langkah mencari korelasi antar buku menggunakan <i>cosine similarity</i>, dengan memasukkan vektor tfidf kedalam <i>cosine similarity</i> maka akan didapat larik yang berisi hubungan antar buku. Berikut contoh sampel data buku beserta korelasinya:
 
 
 |Book-Title|Another Woman&\#39;S Baby \(Secret Passions\) \(Harlequin Intrigue, No\. 639\)|Imagine \(American Romance, No 341\)|The Marriage Market  \(9 to 5\)|Silent Surrender \(Nighthawk Island\) \(Harlequin Intrigue Series, No\. 660\)|Man Worth Knowing \(Harlequin Presents, No 865\)|Gideon&\#39;S Baby \(The First Family Of Texas\) \(Superromance, 1022\)|
@@ -119,6 +121,9 @@ Pada proyek ini, penerapan <i>content based filtering</i> akan menggunakan fungs
 |Year'S Happy Ending|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
 |Major Comes To Texas \(In Uniform\) \(Superromance, 915\)|0\.0|0\.0|0\.0|0\.0|0\.0|1\.0|
 |Maverick \(Harlequin Superromance, No\. 1042\)|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+
+Dapat dilihat pada tabel diatas bahwa terdapat nilai 0.0 dan 1.0, nilai ini menunjukkan korelasi antar dua buku. Korelasi dengan nilai 1.0 menunjukkan bahwa kedua buku tersebut memiliki korelasi yang tinggi, sedangkan nilai 0.0 menunjukkan bahwa kedua buku tidak memiliki korelasi. Contoh pada tabel diatas dapat dilihat bahwa buku dengan judul "Gideon&#39;S Baby (The First Family Of Texas) (Superromance, 1022)" memiliki korelasi dengan Major Comes To Texas (In Uniform) (Superromance, 915).
+Dengan menggunakan nilai korelasi inilah sistem rekomendasi akan dibuat.
 
 ### Collaborative Filtering
 
