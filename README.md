@@ -125,6 +125,19 @@ Pada proyek ini, penerapan <i>content based filtering</i> akan menggunakan fungs
 Dapat dilihat pada tabel diatas bahwa terdapat nilai 0.0 dan 1.0, nilai ini menunjukkan korelasi antar dua buku. Korelasi dengan nilai 1.0 menunjukkan bahwa kedua buku tersebut memiliki korelasi yang tinggi, sedangkan nilai 0.0 menunjukkan bahwa kedua buku tidak memiliki korelasi. Contoh pada tabel diatas dapat dilihat bahwa buku dengan judul "Gideon&#39;S Baby (The First Family Of Texas) (Superromance, 1022)" memiliki korelasi dengan Major Comes To Texas (In Uniform) (Superromance, 915).
 Dengan menggunakan nilai korelasi inilah sistem rekomendasi akan dibuat.
 
+Selanjutnya dibuatlah sebuah fungsi dengan parameter judul buku, dataframe korelasi antar buku, dan dataframe antara judul buku dan penulis buku. Fungsi ini akan mengembalikan 5 rekomendasi sesuai dengan judul buku yang menjadi parameter berdasarkan penulisnya.
+
+Untuk melihat apakah penerapan teknik <i>content based filtering</i> berjalan dengan baik, maka dilakukan uji coba dengan memasukkan "Major Comes To Texas (In Uniform) (Superromance, 915" sebagi parameter pada fungsi yang telah dibuat. Berikut hasil kembalian dari fungsi tersebut
+
+|index|Book-Title|Book-Author|
+|---|---|---|
+|0|Jackson's Girls  \(Raising Cane\)|K\.N\. Casper|
+|1|First Daughter \(The First Family Of Texas\) \(Harlequin Superromance, No\. 1006\)|K\. N\. Casper|
+|2|Texan \(Home On The Ranch\) \(Harlequin Superromance, No\. 884\)|K\. N\. Casper|
+|3|Mother To His Children \(The First Family Of Texas\) \(Harlequin Superromance, No\. 1041\)|K\.N\. Casper|
+|4|The Woman In The News   Beyond 9 To 5 \(Harlequin Superromance, 1161\)|K\.N\. Casper|
+
+
 ### Collaborative Filtering
 
 <i>Collaboratiev Filtering</i> merupakan teknik yang bekerja dengan merekomendasikan <i>item</i> berdasarkan pengguna lain yang memiliki prefensi yang mirip. Berikut kelebihan dan kekurangan dari teknik ini.
