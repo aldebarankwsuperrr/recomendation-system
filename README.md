@@ -15,8 +15,10 @@ Untuk membuat sistem rekomendasi yang dapat meningkatkan minat baca, terdapat be
 - Bagaimana cara membuat sistem rekomendasi yang dapat merekomendasikan buku lain yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca ?
 
 Untuk menyelesaikan permasalahan tersebut, akan dibuat sebuah sistem rekomendasi yang terfokus pada tujuan berikut:
-- Mampu menghasilkan rekomendasi buku yang sesuai dengan minat pembaca. Salah satu teknik yang dapat digunakan adalah teknik <i>content based filtering</i>. Teknik <i>content based filtering</i> bekerja dengan mempelajari riwayat buku yang telah dibaca contohnya siapa penulis dari buku yang sering dibaca, apa pencetak buku dari buku yang dibaca user, dan lain sebagainya.. Dengan menggunakan teknik ini, rekomendasi yang diberikan oleh sistem akan lebih tepat.
-- Mampu merekomendasikan buku yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca. Teknik yang dapat digunakan adalah teknik <i>collaborative filtering</i>. Teknik ini bekerja dengan mempelajari pembaca, contohnya nilai yang diberikan oleh pembaca pada suatu buku, dan lain sebagainya.
+- Mampu menghasilkan rekomendasi buku yang sesuai dengan minat pembaca. 
+Salah satu teknik yang dapat digunakan adalah teknik <i>content based filtering</i>. Teknik <i>content based filtering</i> bekerja dengan mempelajari riwayat buku yang telah dibaca contohnya siapa penulis dari buku yang sering dibaca, apa pencetak buku dari buku yang dibaca user, dan lain sebagainya.. Dengan menggunakan teknik ini, rekomendasi yang diberikan oleh sistem akan lebih tepat.
+- Mampu merekomendasikan buku yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca. 
+Teknik yang dapat digunakan adalah teknik <i>collaborative filtering</i>. Teknik ini bekerja dengan mempelajari pembaca, contohnya nilai yang diberikan oleh pembaca pada suatu buku, dan lain sebagainya.
 
 ## Data Understanding 
 <a href="https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset">Dataset</a> yang digunakan merupakan sebuah dataset buku yang terpisah menjadi 3 file, yaitu "Book.csv", "Rating.csv", dan "User.csv". Berikut penjelasan lebih rinci pada ketiga file tersebut.
@@ -75,10 +77,21 @@ File ini berisi dataset penilaian dari pengguna dengan jumlah total sample seban
 <br>
 Seperti yang telah dijelaskan pada bagian Rating.csv bahwa nilai yang diberikan oleh pengguna terbagi menjadi 2 jenis yaitu, eksplisit dan implisit. Untuk nilai dengan jenis ekplisit memiliki rentang nilai dari 1 - 10, sedangkan pada nilai implisit hanya terdapat satu nilai yaitu 0. Untuk membuat sistem rekomendasi dengan teknik <i>collaborative filtering</i> maka akan digunakan data dengan nilai eksplisit. Berikut tabel dari jumlah data nilai implisi dan eksplisit.
 
+
 |        Jenis       |   Jumlah Data    |
 |:------------------:|:----------------:|
 |       eksplisit    | 433.671 |
 |       implisit     | 716.109 |
+
+Meskipun jumlah data pada nilai dengan jenis ekplisit kurang dari 50 %, nilai dengan jenis tersebut akan dipakai dalam penerapan teknik <i>collaborative filtering</i>. Sedangkan nilai dengan jenis implisit tidak akan dipakai, karena nilai dengan jenis implisit hanya memiliki satu jenis <i>value</i> yaitu 0, sehingga akan sulit menerapakan teknik <i>collaborative filtering</i> menggunakan nilai implisit.
+
+
+## Data Preparation
+Agar model dapat dengan mudah memahami dataset yang digunakan, maka dataset harus melewati beberapa proses. Berikut 
+
+Seperti yang dijelaskan pada bagian eksplorasi data, bahwa data <i>rating</i> yang akan digunakan adalah data eksplisit. Oleh karena itu data implisit pada file Rating.csv akan dihapus, sehingga hanya tertinggal data eksplisit. Setelah itu, file Book.csv dan file Rating.csv akan digabungkan menjadi satu
+
+Setelah melakukan eksplorasi pada file-file yang akan digunakan, selanjutnya adalah melakukan penggabungan file Book.csv, User.Csv, dan 
 
 
 
