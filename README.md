@@ -95,7 +95,21 @@ Agar model dapat dengan mudah memahami dataset yang digunakan, maka dataset haru
 - Selanjutnya akan dipilih penerbit dengan jumlah buku terbitan paling banyak, hal ini dilakukan karena keterbatasan komputasi dalam mengolah jumlah buku yang mencapai ratusan ribu.
 - Buku dengan penerbit yang dipilih akan digunakan sebagai dataset yang akan digunakan membuat model sistem rekomendasi.
 
+## Modeling
 
+Buku-buku dengan penerbit yang telah dipilih akan menjadi dataset dari pembuatan model sistem rekomendasi. Dalam membuat model sistem rekomendasi terdapat dua teknik yang dapat diterapkan, yaitu <i>content based filtering</i> dan <i>collaborative filtering</i>. Berikut penjelasan lebih rinci kedua teknik tersebut
+
+### Content Based Filtering
+
+<i>Content Based Filtering</i> merupakan teknik yang bekerja dengan mempelajari konten minat pengguna dimasa lalu, kemudian merekomendasikan <i>item</i> baru berdasarkan kegiatan tersebut. Berikut kelebihan dan kekurangan dari teknik ini
+
+Kelebihan :
+- Mampu merekomendasikan <i>item</i> baru yang sesuai dengan minat pengguna.
+- Mampu merekomendasikan <i>item</i> baru tanpa menunggu penilaian dari pengguna lain mengenai <i>item</i> tersebut.
+
+Kekurangan :
+- Rekomendasi bersifat monoton.
+- Kurang mampu merekomendasikan <i>item</i> yang tidak terduga
 
 
 
