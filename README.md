@@ -29,6 +29,7 @@ File ini berisi dataset dari buku, berikut variabel yang ada pada file ini:
   - Image-URL-S : merupakan link dari gambar cover
   - Image-URL-M : merupakan link dari gambar cover
   - Image-URL-L : merupakan link dari gambar cover <br>
+  
 Berikut penjelasan lebih rinci mengenai variabel yang ada pada file Book.csv 
 
     |        Column       |  Non-Null Count |  Dtype |
