@@ -77,8 +77,10 @@ Seperti yang telah dijelaskan pada bagian Rating.csv bahwa nilai yang diberikan 
 
 |        Jenis       |   Jumlah Data    |
 |:------------------:|:----------------:|
-|       eksplisit    | 433671 |
-|       implisit     | 716109 |
+|       eksplisit    | 433.671 |
+|       implisit     | 716.109 |
+
+
 
 
 
