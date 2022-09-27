@@ -109,7 +109,28 @@ Kelebihan :
 
 Kekurangan :
 - Rekomendasi bersifat monoton.
-- Kurang mampu merekomendasikan <i>item</i> yang tidak terduga
+- Kurang mampu merekomendasikan <i>item</i> yang tidak terduga.
+
+Pada proyek ini, penerapan <i>content based filtering</i> akan menggunakan fungsi tfidfvectorizer dari <i>library</i> sklearn. Dengan menggunakan fungsi tersebut
+
+
+|Book-Title|Another Woman&\#39;S Baby \(Secret Passions\) \(Harlequin Intrigue, No\. 639\)|Imagine \(American Romance, No 341\)|The Marriage Market  \(9 to 5\)|Silent Surrender \(Nighthawk Island\) \(Harlequin Intrigue Series, No\. 660\)|Man Worth Knowing \(Harlequin Presents, No 865\)|Gideon&\#39;S Baby \(The First Family Of Texas\) \(Superromance, 1022\)|
+|---|---|---|---|---|---|---|
+|Year'S Happy Ending|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+|Major Comes To Texas \(In Uniform\) \(Superromance, 915\)|0\.0|0\.0|0\.0|0\.0|0\.0|1\.0|
+|Maverick \(Harlequin Superromance, No\. 1042\)|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+
+### Collaborative Filtering
+
+<i>Collaboratiev Filtering</i> merupakan teknik yang bekerja dengan merekomendasikan <i>item</i> berdasarkan pengguna lain yang memiliki prefensi yang mirip. Berikut kelebihan dan kekurangan dari teknik ini.
+
+Kelebihan :
+- Mampu merekomendasikan <i>item</i> baru meskipun konten berjumlah sedikit.
+- Mampu merekomendasikan <i>item</i> baru yang tidak terduga, sehingga rekomendasi bersifat dinamis.
+
+Kekurangan :
+- Tidak bisa memberikan rekomendasi pada user baru.
+- Tidak bisa merekomendasikan item baru, sehingga sulit melakukan pembaharuan rekomendasi.
 
 
 
