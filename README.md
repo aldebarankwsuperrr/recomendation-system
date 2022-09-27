@@ -15,8 +15,8 @@ Untuk membuat sistem rekomendasi yang dapat meningkatkan minat baca, terdapat be
 - Bagaimana cara membuat sistem rekomendasi yang dapat merekomendasikan buku lain yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca ?
 
 Untuk menyelesaikan permasalahan tersebut, akan dibuat sebuah sistem rekomendasi yang terfokus pada tujuan berikut:
-- Mampu menghasilkan rekomendasi buku yang sesuai dengan minat pembaca menggunakan teknik <i>content based filtering</i>.
-- Mampu merekomendasikan buku yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca menggunakan teknik <i>collaborative filtering</i>.
+- Mampu menghasilkan rekomendasi buku yang sesuai dengan minat pembaca. Salah satu teknik yang dapat digunakan adalah teknik <i>content based filtering</i>. Teknik <i>content based filtering</i> bekerja dengan mempelajari riwayat buku yang telah dibaca contohnya siapa penulis dari buku yang sering dibaca, apa pencetak buku dari buku yang dibaca user, dan lain sebagainya.. Dengan menggunakan teknik ini, rekomendasi yang diberikan oleh sistem akan lebih tepat.
+- Mampu merekomendasikan buku yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca. Teknik yang dapat digunakan adalah teknik <i>collaborative filtering</i>. Teknik ini bekerja dengan mempelajari pembaca, contohnya nilai yang diberikan oleh pembaca pada suatu buku, dan lain sebagainya.
 
 ## Data Understanding 
 <a href="https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset">Dataset</a> yang digunakan merupakan sebuah dataset buku yang terpisah menjadi 3 file, yaitu "Book.csv", "Rating.csv", dan "User.csv". Berikut penjelasan lebih rinci pada ketiga file tersebut.
@@ -42,7 +42,21 @@ File ini berisi dataset dari buku dengan jumlah total sample sebanyak 271.360 sa
     |     Image-URL-S     | 271360 non-null | object |
     |     Image-URL-M     | 271360 non-null | object |
     |     Image-URL-L     | 271357 non-null | object |
+    
+- User.csv<br>
+File ini berisi dataset pengguna dengan jumlah total sample sebanyak 278.858 sampel, berikut variabel yang ada pada file ini:
+  - User-ID : merupakan id dari user
+  - Location : merupakan demografis dari pengguna
+  - Age : merupakan umur dari pengguna <br>
+  
+  Berikut penjelasan lebih rinci mengenai variabel yang ada pada file User.csv 
 
+    |        Column       |  Non-Null Count  |  Dtype |
+    |:-------------------:|:----------------:|:------:|
+    |       User-ID       | 278858 non-null |  int64 |
+    |       Location      | 278858 non-null | object |
+    |         Age         | 168096 non-null |  float64 |
+    
 - Rating.csv<br>
 File ini berisi dataset penilaian dari pengguna dengan jumlah total sample sebanyak 1.149.780 sampel, berikut variabel yang ada pada file ini:
   - User-ID : merupakan id dari pengguna
@@ -57,21 +71,14 @@ File ini berisi dataset penilaian dari pengguna dengan jumlah total sample seban
     |         ISBN        | 1149780 non-null | object |
     |     Book-Rating     | 1149780 non-null |  int64 |
 
-- User.csv<br>
-File ini berisi dataset pengguna dengan jumlah total sample sebanyak 278.858 sampel, berikut variabel yang ada pada file ini:
-  - User-ID : merupakan id dari user
-  - Location : merupakan demografis dari pengguna
-  - Age : merupakan umur dari pengguna <br>
-  
-  Berikut penjelasan lebih rinci mengenai variabel yang ada pada file User.csv 
 
-    |        Column       |  Non-Null Count  |  Dtype |
-    |:-------------------:|:----------------:|:------:|
-    |       User-ID       | 278858 non-null |  int64 |
-    |       Location      | 278858 non-null | object |
-    |         Age         | 168096 non-null |  float64 |
+<br>
+Seperti yang telah dijelaskan pada bagian Rating.csv bahwa nilai yang diberikan oleh pengguna terbagi menjadi 2 jenis yaitu, eksplisit dan implisit. Untuk nilai dengan jenis ekplisit memiliki rentang nilai dari 1 - 10, sedangkan pada nilai implisit hanya terdapat satu nilai yaitu 0. Untuk membuat sistem rekomendasi dengan teknik <i>collaborative filtering</i> maka akan digunakan data dengan nilai eksplisit. Berikut tabel dari jumlah data nilai implisi dan eksplisit.
 
-
+|        Jenis       |   Jumlah Data    |
+|:------------------:|:----------------:|
+|       eksplisit    | 433671 |
+|       implisit     | 716109 |
 
 
 
