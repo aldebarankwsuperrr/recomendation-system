@@ -47,7 +47,7 @@ File ini berisi dataset dari buku dengan jumlah total sample sebanyak 271.360 sa
 File ini berisi dataset penilaian dari pengguna dengan jumlah total sample sebanyak 1.149.780 sampel, berikut variabel yang ada pada file ini:
   - User-ID : merupakan id dari pengguna
   - ISBN : merupakan id dari buku yang dinilai oleh pengguna
-  - Book-Rating : merupakan nilai dari pengguna untuk buku <br>
+  - Book-Rating : merupakan nilai dari pengguna untuk buku yang dinyatakan dalam skala 1 - 10 untuk eksplisit, dan 0 untuk implisit <br>
   
   Berikut penjelasan lebih rinci mengenai variabel yang ada pada file Rating.csv 
 
@@ -60,7 +60,7 @@ File ini berisi dataset penilaian dari pengguna dengan jumlah total sample seban
 - User.csv<br>
 File ini berisi dataset pengguna dengan jumlah total sample sebanyak 278.858 sampel, berikut variabel yang ada pada file ini:
   - User-ID : merupakan id dari user
-  - Location : merupakan tempat dari pengguna
+  - Location : merupakan demografis dari pengguna
   - Age : merupakan umur dari pengguna <br>
   
   Berikut penjelasan lebih rinci mengenai variabel yang ada pada file User.csv 
