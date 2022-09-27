@@ -138,8 +138,9 @@ Untuk melihat apakah penerapan teknik <i>content based filtering</i> berjalan de
 |4|The Woman In The News   Beyond 9 To 5 \(Harlequin Superromance, 1161\)|K\.N\. Casper|
 
 
-### Collaborative Filtering
+Dari tabel diatas dapat dilihat bahwa penerapan <i>content based filtering</i> dapat memberikan rekomendasi yang memiliki kesamaan penulis dengan buku yang pernah dibaca pengguna.
 
+### Collaborative Filtering
 <i>Collaboratiev Filtering</i> merupakan teknik yang bekerja dengan merekomendasikan <i>item</i> berdasarkan pengguna lain yang memiliki prefensi yang mirip. Berikut kelebihan dan kekurangan dari teknik ini.
 
 Kelebihan :
