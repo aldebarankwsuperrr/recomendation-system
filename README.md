@@ -5,9 +5,6 @@ Membaca merupakan sebuah kegiatan yang memiliki segudang manfaat. Sudah banyak d
 
 Namun terdapat sebuah fakta yang menyayat hati. Pada tahun 2015, Perpustakaan Nasional Indonesia memberikan pernyataan bahwa hanya 10% dari anak Indonesia yang memiliki minat baca yang tinggi, hal ini tentu merupakan fakta yang pahit. Oleh karena itu, dibutuhkan sebuah sistem yang dapat meningkatkan minat baca rakyat Indonesia. Dalam bidang <i>machine learning</i> terdapat sebuah cabang keilmuan yang sesuai dengan permasalahan ini, yaitu sistem rekomendasi. Dengan menggunakan sistem rekomendasi, pembaca akan disugukan rekomendasi-rekomendasi buku yang sesuai dengan minat pembaca, karena setiap pembaca memiliki minat yang berbeda. Adanya penerapan sistem rekomendasi ini diharapkan akan meningkatkan minat baca.
 
-<br>file:///C:/Users/fahrul/Downloads/NuningKurniasih_Kebiasaan%20Membaca%20di%20Era%20Digital.pdf
-<br>
-
 ## Business Understanding
 
 Untuk membuat sistem rekomendasi yang dapat meningkatkan minat baca, terdapat beberapa dua permasalahan utama, yaitu:
