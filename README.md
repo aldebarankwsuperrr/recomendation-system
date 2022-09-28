@@ -151,8 +151,7 @@ Kekurangan :
 - Tidak bisa memberikan rekomendasi pada user baru.
 - Tidak bisa merekomendasikan item baru, sehingga sulit melakukan pembaharuan rekomendasi.
 
-
-
+Untuk menerapkan teknik <i>collaborative filtering</i> diperlukan penyandian fitur ISBN dan User-ID menjadi indeks integer. Tahap selanjutnya adalah pembagian data latih dan data tes dengan menggunakan fungsi <i>train_test_split()</i> dari <i>library</i> skicit learn. Proyek ini menggunakan skala perbandingan antara data latih dan data tes adalah 80 : 20. Selanjutnya, data latih dan data tes akan melewati proses <i>training</i>. Pada proses <i>training</i> skor kecocokan antara pengguna dan buku akan dihitung menggunakan teknik <i>embedding</i>.Penerapan teknik <i>embedding</i> diawali proses <i>embedding</i> pada data pengguna dan buku, setelah itu akan dilakukan operasi perkalian dot antara pengguna dan buku yang telah melewati proses <i>embedding</i>. Pada teknik ini juga kita dapat menambahkan bias. Skor kecocokan pada antara pengguna dan buku ditetapkan dengan skala antara 0 sampai 1 dengan menggunakan aktivasi <i>sigmoid</i>. Selanjutnya untuk menghitung <i>loss function</i> akan digunakan <i>Binary Crossentropy</i>, serta Adam sebagai <i>optimizer</i>, dan RMSE untuk menghitung error pada proses <i>compile</i> model.
 
 
 
