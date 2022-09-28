@@ -16,7 +16,7 @@ Untuk menyelesaikan permasalahan tersebut, akan dibuat sebuah sistem rekomendasi
 - Mampu merekomendasikan buku yang belum pernah dibaca namun memiliki korelasi dengan buku yang pernah dibaca oleh pembaca. Teknik yang dapat digunakan adalah teknik <i>collaborative filtering</i>. Teknik ini bekerja dengan mempelajari pembaca, contohnya nilai yang diberikan oleh pembaca pada suatu buku, dan lain sebagainya.
 
 ## Data Understanding 
-<a href="https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset">Dataset</a> yang digunakan merupakan sebuah dataset yang berasal dari laman <a href = "https://www.kaggle.com/">Kaggle</a> dengan terpisah menjadi 3 file, yaitu "Book.csv", "Rating.csv", dan "User.csv". Berikut penjelasan lebih rinci pada ketiga file tersebut.
+<a href="https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset">Dataset</a> yang digunakan merupakan sebuah dataset yang berasal dari laman <a href = "https://www.kaggle.com/">Kaggle</a> dengan nama "Book Recommendation Dataset" yang tersaji secara terpisah menjadi 3 file, yaitu "Book.csv", "Rating.csv", dan "User.csv". Berikut penjelasan lebih rinci pada ketiga file tersebut.
 - Book.csv<br>
 File ini berisi dataset dari buku dengan jumlah total sample sebanyak 271.360 sampel, berikut variabel yang ada pada file ini:
   - ISBN : merupakan id dari tiap buku
@@ -93,7 +93,7 @@ Agar model dapat dengan mudah memahami dataset yang digunakan, maka dataset haru
 - Pada saat proses penggabungan, tentunya ada beberapa data yang memiliki <i>missing value</i> khususnya pada kolom "User-ID" dan "Book-rating". Karena kedua hal ini sangat penting dalam membuat model sistem rekomendasi, jadi kita harus membuang semua data yang memiliki <i>missing value</i> meskipun jumlahnya cukup banyak. Fungsi yang akan digunakan pada tahap ini adalah <i>dropna()</i>.
 - Selanjutnya akan dipilih penerbit dengan jumlah buku terbitan paling banyak, hal ini dilakukan karena keterbatasan komputasi dalam mengolah jumlah buku yang mencapai ratusan ribu.
 - Buku dengan penerbit yang dipilih akan digunakan sebagai dataset yang akan digunakan membuat model sistem rekomendasi.
-
+- Setelah itu untuk membangun model <i>collaborative filtering</i> diperlukan adanya <i>encoding</i> pada fitur pengguna dan buku. Selanjutnya dataset akan dibagi dengan skala 80 % untuk data latih dan 20 % untuk data tes.
 ## Modeling
 
 Buku-buku dengan penerbit yang telah dipilih akan menjadi dataset dari pembuatan model sistem rekomendasi. Dalam membuat model sistem rekomendasi terdapat dua teknik yang dapat diterapkan, yaitu <i>content based filtering</i> dan <i>collaborative filtering</i>. Berikut penjelasan lebih rinci kedua teknik tersebut
@@ -138,7 +138,7 @@ Untuk melihat apakah penerapan teknik <i>content based filtering</i> berjalan de
 Dari tabel diatas dapat dilihat bahwa penerapan <i>content based filtering</i> dapat memberikan rekomendasi yang memiliki kesamaan penulis dengan buku yang pernah dibaca pengguna.
 
 ### Collaborative Filtering
-<i>Collaboratiev Filtering</i> merupakan teknik yang bekerja dengan merekomendasikan <i>item</i> berdasarkan pengguna lain yang memiliki prefensi yang mirip. Berikut kelebihan dan kekurangan dari teknik ini.
+<i>Collaborative Filtering</i> merupakan teknik yang bekerja dengan merekomendasikan <i>item</i> berdasarkan pengguna lain yang memiliki prefensi yang mirip. Berikut kelebihan dan kekurangan dari teknik ini.
 
 Kelebihan :
 - Mampu merekomendasikan <i>item</i> baru meskipun konten berjumlah sedikit.
@@ -154,14 +154,18 @@ Untuk menerapkan teknik <i>collaborative filtering</i> diperlukan <i>encoding</i
 
 Dari gambar diatas dapat dilihat bahwa <i>error</i> pada pelatihan data turun secara signifikan. Selanjutnya adalah pengujian kemampuan model yang telah dibuat dalam membuat rekomendasi untuk pengguna, dalam pengujian ini juga akan dipilah antara buku yang dibaca oleh pengguna dengan buku yang belum dibaca oleh pengguna. Berikut hasil rekomendasi pada salah satu sampel pengguna menggunakan teknik <i>collaborative filtering</i>
 
-|                    Book Title                    |      Book-Author     |
-|:------------------------------------------------:|:--------------------:|
-|      A Snowball's Chance/ A Christmas Carol      |     Nikki Rivers     |
-|       Long Tall Texans: Emmett-Regan-Burke       |     Diana Palmer     |
-| Sawyer (The Buckhorn Brothers) (Temptation, 786) |      Lori Foster     |
-|  For The Defense  (White Knight Investigations)  |     M. J. Rodgers    |
-|         Fool For Love (Feature Anthology)        | Vicky Lewis Thompson |
-|                 Flaunting Cactus                 |       Wynne May      |
+
+|                     Book Title                    |      Book-Author     |
+|:-------------------------------------------------:|:--------------------:|
+|       A Snowball's Chance/ A Christmas Carol      |     Nikki Rivers     |
+|        Long Tall Texans: Emmett-Regan-Burke       |     Diana Palmer     |
+|  Sawyer (The Buckhorn Brothers) (Temptation, 786) |      Lori Foster     |
+|   For The Defense  (White Knight Investigations)  |     M. J. Rodgers    |
+|         Fool For Love (Feature Anthology)         | Vicky Lewis Thompson |
+|     The Last Time We Kissed (American Romance)    |       Ann ROth       |
+|                  Flaunting Cactus                 |       Wynne May      |
+| Tall, Dark And Deadly (Dangerous Man) (Harlequ... |    Madeline Harper   |
+|                  Ideal Marriage?                  |    Debbie Macomber   |
 
 Tabel diatas merupakan rekomendasi untuk salah satu sampel pengguna berdasarkan buku dengan nilai paling tinggi dari pengguna.
 
@@ -172,7 +176,11 @@ Pada Model <i>content based filtering</i> digunakan <i>Precision Content Based L
 
 Pada tabel hasil penerapan teknik <i>content based filtering</i> dapat dilihat bahwa seluruhnya merupakan buku dengan penulis yang sama. Hal ini memberikan arti bahwa nilai presisi dari rekomendasi dengan teknik <i>content based filtering</i> adalah 100%.
 
-Sealnjutnya pada model <i>collaborative filtering</i> digunakan <i>Root Mean Square Error</i> (RMSE). RMSE bekerja dengan mengakar kuadratkan <i>mean square error</i> dalam meninjau keakuratan model. Semakin kecil nilai RMSE nya, maka akan semakin tinggi akurat dari model. Berdsarkan visualisasi hasil latihan model, dapat dilihat bahwa model memiliki <i>error</i> dibawah 0.05 pada data latih dan 0.25 pada data tes, hal ini menunjukkan bahwa model memiliki tinggkat kesalahan yang kecil sehingga dapat membuat rekomendasi bagi pengguna dengan akurat.
+Sealnjutnya pada model <i>collaborative filtering</i> digunakan <i>Root Mean Square Error</i> (RMSE). RMSE bekerja dengan mengakar kuadratkan <i>mean square error</i> dalam meninjau keakuratan model. Semakin kecil nilai RMSE nya, maka akan semakin tinggi akurat dari model. Berikut visualisasi dari nilai eror yang didapat model <i>collaborative filtering</i> pada saat proses <i>training</i>
+
+<br>![rmse](https://github.com/aldebarankwsuperrr/dataset/blob/main/download%20(2).png?raw=true)
+
+Berdasarkan visualisasi hasil latihan model, dapat dilihat bahwa model memiliki <i>error</i> dibawah 0.05 pada data latih dan 0.25 pada data tes, hal ini menunjukkan bahwa model memiliki tinggkat kesalahan yang kecil sehingga dapat membuat rekomendasi bagi pengguna dengan akurat.
 
 ## Referensi
 <div class="csl-entry">[1] Putra, A. S., &#38; Santika. R. R. DKK. (2020). <i>Implementasi Machine Learning dalam Penentuan Rekomendasi Musik dengan Metode Content-Based Filtering</i>. https://e-journal.hamzanwadi.ac.id/index.php/edumatic/article/view/2162</div>
