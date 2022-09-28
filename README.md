@@ -178,8 +178,6 @@ Pada tabel hasil penerapan teknik <i>content based filtering</i> dapat dilihat b
 
 Sealnjutnya pada model <i>collaborative filtering</i> digunakan <i>Root Mean Square Error</i> (RMSE). RMSE bekerja dengan mengakar kuadratkan <i>mean square error</i> dalam meninjau keakuratan model. Semakin kecil nilai RMSE nya, maka akan semakin tinggi akurat dari model. Berikut visualisasi dari nilai eror yang didapat model <i>collaborative filtering</i> pada saat proses <i>training</i>
 
-<br>![rmse](https://github.com/aldebarankwsuperrr/dataset/blob/main/download%20(2).png?raw=true)
-
 Berdasarkan visualisasi hasil latihan model, dapat dilihat bahwa model memiliki <i>error</i> dibawah 0.05 pada data latih dan 0.25 pada data tes, hal ini menunjukkan bahwa model memiliki tinggkat kesalahan yang kecil sehingga dapat membuat rekomendasi bagi pengguna dengan akurat.
 
 ## Referensi
