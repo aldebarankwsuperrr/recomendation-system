@@ -180,5 +180,7 @@ Sealnjutnya pada model <i>collaborative filtering</i> digunakan <i>Root Mean Squ
 
 Berdasarkan visualisasi hasil latihan model, dapat dilihat bahwa model memiliki <i>error</i> dibawah 0.05 pada data latih dan 0.25 pada data tes, hal ini menunjukkan bahwa model memiliki tinggkat kesalahan yang kecil sehingga dapat membuat rekomendasi bagi pengguna dengan akurat.
 
+Dengan menggunakan <i>content based filtering</i>, karateristik dari pengguna dapat teridentifikasi dengan baik dengan melihat pencipta buku yang pernah dibaca pengguna, sehingga dapat memberikan rekomendasi yang cocok dengan pengguna, rekomendasi yang sesuai dengan pengguna tentunya akan menarik perhatian dari pengguna, hal ini diharapkan dapat membuat pengguna lebih bergairah untuk membaca buku. Untuk rekomendasi yang lebih dinamis, <i>collaborative filtering</i> dapat memberikan rekomendasi yang tidak terduga namun masih memiliki korelasi dengan pengguna. Hal tersebut akan memperbesar pengguna akan ketagihan membaca buku, karena pada dasarnya manusia akan condong kearah hal yang menjadi minatnya, hal inilah yang menjadi fokus dalam membuat sistem rekomendasi yang dapat meningkatkan minat baca.
+
 ## Referensi
 <div class="csl-entry">[1] Putra, A. S., &#38; Santika. R. R. DKK. (2020). <i>Implementasi Machine Learning dalam Penentuan Rekomendasi Musik dengan Metode Content-Based Filtering</i>. https://e-journal.hamzanwadi.ac.id/index.php/edumatic/article/view/2162</div>
