@@ -169,3 +169,10 @@ Dari gambar diatas dapat dilihat bahwa <i>error</i> pada pelatihan data turun se
 Tabel diatas merupakan rekomendasi untuk salah satu sampel pengguna berdasarkan buku dengan nilai paling tinggi dari pengguna.
 
 ## Evaluation
+Pada Model <i>content based filtering</i> digunakan <i>Precision Content Based Learning</i>. <i>Precision Content Based Learning</i> bekerja dengan relevansi item yang ditawarkan dibagi dengan jumlah item yang direkomendasikan. Berikut matematis dari <i>Precision Content Based Learning</i>:
+
+[precision]!(https://github.com/aldebarankwsuperrr/dataset/blob/main/0_dQDjsDk8Oz4bz_4N.png?raw=true)
+
+Pada tabel hasil penerapan teknik <i>content based filtering</i> dapat dilihat bahwa seluruhnya merupakan buku dengan penulis yang sama. Hal ini memberikan arti bahwa nilai presisi dari rekomendasi dengan teknik <i>content based filtering</i> adalah 100%.
+
+Sealnjutnya pada model <i>collaborative filtering</i> digunakan <i>Root Mean Square Error</i> (RMSE). RMSE bekerja dengan mengakar kuadratkan <i>mean square error</i> dalam meninjau keakuratan model. Semakin kecil nilai RMSE nya, maka akan semakin tinggi akurat dari model. Berdsarkan visualisasi hasil latihan model, dapat dilihat bahwa model memiliki <i>error</i> dibawah 0.05 pada data latih dan 0.25 pada data tes, hal ini menunjukkan bahwa model memiliki tinggkat kesalahan yang kecil sehingga dapat membuat rekomendasi bagi pengguna dengan akurat.
