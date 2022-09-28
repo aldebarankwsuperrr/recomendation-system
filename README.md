@@ -155,3 +155,17 @@ Untuk menerapkan teknik <i>collaborative filtering</i> diperlukan penyandian fit
 
 <br>![rmse](https://github.com/aldebarankwsuperrr/dataset/blob/main/download%20(2).png?raw=true)
 
+Dari gambar diatas dapat dilihat bahwa <i>error</i> pada pelatihan data turun secara signifikan. Selanjutnya adalah pengujian kemampuan model yang telah dibuat dalam membuat rekomendasi untuk pengguna, dalam pengujian ini juga akan dipilah antara buku yang dibaca oleh pengguna dengan buku yang belum dibaca oleh pengguna. Berikut hasil rekomendasi pada salah satu sampel pengguna menggunakan teknik <i>collaborative filtering</i>
+
+|                    Book Title                    |      Book-Author     |
+|:------------------------------------------------:|:--------------------:|
+|      A Snowball's Chance/ A Christmas Carol      |     Nikki Rivers     |
+|       Long Tall Texans: Emmett-Regan-Burke       |     Diana Palmer     |
+| Sawyer (The Buckhorn Brothers) (Temptation, 786) |      Lori Foster     |
+|  For The Defense  (White Knight Investigations)  |     M. J. Rodgers    |
+|         Fool For Love (Feature Anthology)        | Vicky Lewis Thompson |
+|                 Flaunting Cactus                 |       Wynne May      |
+
+Tabel diatas merupakan rekomendasi untuk salah satu sampel pengguna berdasarkan buku dengan nilai paling tinggi dari pengguna.
+
+## Evaluation
