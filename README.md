@@ -124,7 +124,7 @@ Dengan menggunakan nilai korelasi inilah sistem rekomendasi akan dibuat.
 
 Selanjutnya dibuatlah sebuah fungsi dengan parameter judul buku, dataframe korelasi antar buku, dan dataframe antara judul buku dan penulis buku. Fungsi ini akan mengembalikan 5 rekomendasi sesuai dengan judul buku yang menjadi parameter berdasarkan penulisnya.
 
-Untuk melihat apakah penerapan teknik <i>content based filtering</i> berjalan dengan baik, maka dilakukan uji coba dengan memasukkan "Major Comes To Texas (In Uniform) (Superromance, 915" sebagi parameter pada fungsi yang telah dibuat. Berikut hasil kembalian dari fungsi tersebut
+Untuk melihat apakah penerapan teknik <i>content based filtering</i> berjalan dengan baik, maka dilakukan uji coba dengan memasukkan "Major Comes To Texas (In Uniform) (Superromance, 915") sebagai parameter pada fungsi yang telah dibuat. Berikut hasil kembalian dari fungsi tersebut
 
 |index|Book-Title|Book-Author|
 |---|---|---|
